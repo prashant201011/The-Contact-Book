@@ -1,0 +1,182 @@
+/* common for all */
+
+*{
+    font-family: 'Fira Sans', sans-serif;
+}
+
+
+:root {
+    --body-background: #6d02bf;
+    --background:#C9EEFF;
+    --white: #C9EEFF;
+    --black: rgb(160, 160, 160);
+    --nav: #6c5aa3;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    /* background-color: var(--background); */
+}
+
+
+
+
+
+
+
+
+/* Submit type button */
+
+form button{
+    margin-top: 5px;
+    margin-left: 25%;
+    cursor: pointer;
+    width: 50%;
+    font-size: 2rem;
+    color: var(--white);
+    background-color: #00000080;
+    text-align: center;
+    border-radius: 5px;
+}
+
+
+button:hover{
+    transition: 0.5s;
+    color: black;
+    background-color: var(--white);
+    box-shadow: 0 0 0 2px var(--white);
+}
+
+
+
+
+/* Login and SignUp Snippets */
+
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: #00000080;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px #00000099;
+    border-radius: 10px;
+}
+
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box input {
+    outline: none;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+
+.forgot {
+    position: absolute;
+    font-size: 10px;
+    padding: 5px 0;
+    right: 0;
+}
+
+.login-box button{
+    padding: 4px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 3px 20px;
+    font-size: 20px;
+    background-color: #0093e9;
+}
+
+a{
+    color: #03e9f4;
+}
+.forgot a:hover{
+    color: #F07DEA;
+}
+
+.sign-up {
+    color: white;
+    font-size: 12px;
+    padding: 2px;
+    text-align: center;
+}
+
+.sign-up a:hover{
+    color: #C3FF99;
+}
+
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+
+input {
+    color: #e1dfdf !important;
+    -webkit-background-clip: text !important;
+    background-clip:  text !important;
+}
+
+input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #979595;
+    font-family: cursive;
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .specific{
+        font-size: .85rem;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+    .specific{
+        font-size: .7rem;
+    }
+
+    form button{
+        font-size: 1.5rem;
+    }
+
+}

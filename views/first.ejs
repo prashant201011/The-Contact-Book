@@ -1,0 +1,56 @@
+<html>
+    <title><%=pagetitle%></title>
+    <link rel="stylesheet" href="css/first.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+      <body>
+        <div class="mainPage">
+          <div class="navbar valueh"> 
+            <h1> Welcome <%=username%> this is your Contact List ! </h1>
+            <form  action="/logout" method="POST">
+              <button class="logout" type="submit">Logout</button>
+            </form>
+          </div>
+
+          <form action="/form"><button type="submit">ADD MORE</button></form>
+
+
+
+
+          <div class="container">
+            <div class="cardsContainer">
+              <% cand.forEach(candidate =>{ %>
+                <div class="card">
+                    <div class="contentBx">
+                        <div class="iconBx" >
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <div class="text">
+                            <h2><%=candidate.fname%> <%=candidate.lname%></h2>
+                            <h2><%=candidate.phoneno%></h2>
+
+                            <% if (candidate.about != "") { %>
+                              <p> <%=candidate.about%></p>
+                              <%} 
+                              else { %>
+                              <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque ad id laboriosam minus. </p>
+                              <% } %>
+
+
+                            <div class="btns">
+                              <a class="btn" href="/remove/<%=candidate._id%>" class="remove">Delete</a>
+                              <a class="btn" href="/edit/<%=candidate._id%>" class="edit">Update</a>
+                            </div>
+                        </div>
+  
+                    </div>
+                </div>
+              <%})%>
+            </div>
+          </div>
+
+        </div> 
+      </body>
+</html>

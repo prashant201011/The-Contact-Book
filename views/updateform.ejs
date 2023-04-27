@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Updation</title>
+        <link type="text/css" rel="stylesheet" href='/css/style.css' />
+        <link type="text/css" rel="stylesheet" href='/css/update.css' />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200&display=swap" rel="stylesheet">
+
+    </head>
+        <body>
+            <div class="mainPage">
+                <div class="navbar valueh"> 
+                  <h1> Welcome User Here Update List ! </h1>
+                  <form  action="/logout" method="POST">
+                    <button class="logout" type="submit">Logout</button>
+                  </form>
+                </div>
+
+
+                <div class="login-box">
+                    <h2>Update Your Contacts Here!</h2>
+                    <% value.forEach(candidate =>{ %>
+                        <%if(candidate._id==resultid){%>
+                        <form action="/edit/<%=candidate._id%>" method="POST">
+                            <div class="user-box">
+                                <input type="text" name="username" value="<%=candidate.fname%>">
+                                <label>First name</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="text" name="lastname" value="<%=candidate.lname%>">
+                                <label>Last name</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="number" name="phonenumber" value="<%=candidate.phoneno%>">
+                                <label>Phone No</label>
+                            </div>
+                            <div class="user-box">
+                                <input type="text" name="about" value="<%=candidate.about%>">
+                                <label>About</label>
+                            </div>
+                
+                            <button type="submit">Confirm</button>
+                            <button><a href="/first">Cancel</a></button>
+                            <%}else{%>
+                            <%}%>
+                            <%})%>
+                        </form>
+                </div>
+
+            </div>
+            </body>
+            </html>
