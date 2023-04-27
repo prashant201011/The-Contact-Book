@@ -10,8 +10,6 @@ const compression = require("compression");
 const morgan = require("morgan");
 const fs = require("fs");
 
-const MONGODB_URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@cluster0mar2023.iwxf1zf.mongodb.net/${process.env.MONGO_DATABASE}`;
-
 const app = express();
 
 const store = new MongoDBStore({

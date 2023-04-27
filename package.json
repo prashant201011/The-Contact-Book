@@ -5,6 +5,7 @@
     "compression": "^1.7.4",
     "connect-mongodb-session": "^3.1.1",
     "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.2",
@@ -21,14 +22,12 @@
   "name": "p",
   "version": "1.0.0",
   "main": "app.js",
-  "engine":{
-    "node":"16.15.0"
+  "engine": {
+    "node": "16.15.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "NODE_ENV=production MONGO_USER=prashant MONGO_PASSWORD=prashant MONGO_DATABASE=test node app.js",
-    "start-server": "node app.js",
-    "start:dev": "nodemon app.js"
+    "start": "node app.js"
   },
   "keywords": [
     "prince"
